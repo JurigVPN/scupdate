@@ -3,6 +3,33 @@ dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Dat
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
 REPO="https://raw.githubusercontent.com/JurigVPN/scupdate/jurig/"
+CYAN='\033[0;96m'        # Cyan
+
+BG="\E[44;1;39m"
+
+NC="\E[0m"
+
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+
+echo -e "  ${BG} >>> INFORMASI UPDATE SCRIP <<< ${NC}"
+
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+
+echo -e "      •> Add UDP Server <•" | lolcat
+
+echo -e "    •> Install UDP Server <•" | lolcat
+
+echo -e "      •> Fix Bug Script <•" | lolcat
+
+echo -e "     •> Script By @JurigVPN <•" | lolcat
+
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+
+echo -e "  ${BG} >>> THANKS TO JurigVPN <<< ${NC}" 
+
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+
+sleep 3
 echo -e " [INFO] Downloading Update File"
 sleep 2
 rm -rf /tmp/menu
