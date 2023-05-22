@@ -4,8 +4,8 @@
 apt update && apt upgrade
 apt install python3 python3-pip git
 git clone https://github.com/JurigVPN/scupdate.git
-unzip scupdate/ftvpn.zip
-pip3 install -r ftvpn/requirements.txt
+unzip scupdate/xolpanel.zip
+pip3 install -r xolpanel/requirements.txt
 pip3 install pillow
 
 #isi data
@@ -26,22 +26,22 @@ echo "DOMAIN        : $domain"
 echo -e "==============================="
 echo "Setting done"
 
-cat > /etc/systemd/system/botftvpn.service << END
+cat > /etc/systemd/system/xolpanel.service << END
 [Unit]
 Description=Simple XolPanel - @XolPane
 After=network.target
 
 [Service]
 WorkingDirectory=/root
-ExecStart=/usr/bin/python3 -m ftvpn
+ExecStart=/usr/bin/python3 -m xolpanel
 Restart=always
 
 [Install]
 WantedBy=multi-user.target
 END
 
-systemctl start botftvpn
-systemctl enable botftvpn
+systemctl start xolpanel
+systemctl enable xolpanel
 
 clear
 
