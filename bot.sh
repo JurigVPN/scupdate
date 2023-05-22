@@ -20,9 +20,9 @@ clear
 echo "Done"
 echo "Your Data Bot"
 echo -e "==============================="
-echo "DOMAIN         : $bottoken"
-echo "Email          : $admin"
-echo "Api Key        : $domain"
+echo "Api Token     : $bottoken"
+echo "ID            : $admin"
+echo "DOMAIN        : $domain"
 echo -e "==============================="
 echo "Setting done"
 
@@ -40,8 +40,8 @@ Restart=always
 WantedBy=multi-user.target
 END
 
-systemctl start xolpanel 
-systemctl enable xolpanel
+systemctl start botftvpn
+systemctl enable botftvpn
 
 clear
 
