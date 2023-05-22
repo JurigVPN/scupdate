@@ -5,7 +5,7 @@ apt update && apt upgrade
 apt install python3 python3-pip git
 git clone https://github.com/JurigVPN/scupdate.git
 unzip scupdate/ftvpn.zip
-pip3 install -r bot/requirements.txt
+pip3 install -r ftvpn/requirements.txt
 pip3 install pillow
 
 #isi data
