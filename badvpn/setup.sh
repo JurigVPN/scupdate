@@ -1,5 +1,5 @@
 #!/bin/bash
-REPO="https://raw.githubusercontent.com/JurigVPN/pscupdate/jurig/"
+REPO="https://raw.githubusercontent.com/JurigVPN/scupdate/jurig/"
 wget -O /usr/sbin/badvpn "${REPO}badvpn/badvpn" >/dev/null 2>&1
 chmod +x /usr/sbin/badvpn > /dev/null 2>&1
 wget -q -O /etc/systemd/system/badvpn1.service "${REPO}badvpn/badvpn1.service" >/dev/null 2>&1
