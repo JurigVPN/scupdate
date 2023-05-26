@@ -66,7 +66,7 @@ LIFETIME: 150K
 - UNDER ATTACK MODE : OFF
 ```
 ### STATUS
-`TLS`
+`UPDATED`
 
 ### Lisensi
 Repository ini dilindungi oleh lisensi [PAK POLISI](https://mit-license.org/)
