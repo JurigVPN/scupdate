@@ -20,7 +20,7 @@ TANGGAL=$(date '+%Y-%m-%d')
 TIMES="10"
 NAMES=$(whoami)
 IMP="wget -q -O"    
-CHATID="1687681034"
+CHATID="-1001859856643"
 LOCAL_DATE="/usr/bin/"
 MYIP=$(wget -qO- ipinfo.io/ip)
 ISP=$(wget -qO- ipinfo.io/org)
@@ -299,19 +299,15 @@ mesg n || true
 uwu
 EOF
 
-cat >/etc/cron.d/daily_reboot <<EOF
-SHELL=/sbin/sh
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-0 5 * * * root /sbin/reboot
-EOF
 
-echo "*/30 0 * * * root /usr/sbin/xp" >/etc/cron.d/xp_all
-echo "*/10 * * * * root /usr/sbin/clearlog" >/etc/cron.d/clearlog_all
-echo "*/10 * * * * root service cron restart" >/etc/cron.d/restart_cron
+
+chmod 644 /root/.profile
+
+echo "0 0 * * * root xp" >/etc/crontab
+echo "*/1 * * * * root clearlog" >/etc/crontab
+echo '0 0 * * * root reboot" >/etc/crontab
 service cron restart
-cat >/home/daily_reboot <<EOF
-5
-EOF
+
 
 cat >/etc/systemd/system/rc-local.service <<EOF
 [Unit]
